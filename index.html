@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>today's assessment</title>
+</head>
+<body>
+    <h1>JavaScript Assessment</h1>
+    <div id="output"></div>
+
+    <script>
+        function calculatePercentage(value, total) {
+            return (value / total) * 100;
+        }
+
+        function greetUser(name = "Guest") {
+            return `Hello, ${name}!`;
+        }
+
+        function countNumbers(limit) {
+            let i = 1;
+            let result = [];
+            while (i <= limit) {
+                result.push(i);
+                i++;
+            }
+            return result;
+        }
+
+        function createHtmlList(items, type = "ul") {
+            let html = "";
+            const tag = type === "ol" ? "ol" : "ul";
+            html += `<${tag}>`;
+
+            for (let i = 0; i < items.length; i++) {
+                html += `<li>${items[i]}</li>`;
+            }
+
+            html += `</${tag}>`;
+            return html;
+        }
+
+        function printFullName(firstName, lastName) {
+            return `${firstName} ${lastName}`;
+        }
+
+        function countWithDoWhile(limit) {
+            let i = 1;
+            let result = [];
+            do {
+                result.push(i);
+                i++;
+            } while (i <= limit);
+            return result;
+        }
+
+        function separate() {
+            return "<hr>";
+        }
+
+        const output = document.getElementById("output");
+        output.innerHTML = `
+            <div class="box">
+                <h3>Percentage</h3>
+                <p>${calculatePercentage(200, 200)}%</p>
+            </div>
+            <div class="box">
+                <h3>Default Argument</h3>
+                <p>${greetUser("NEEV")}</p>
+            </div>
+            ${separate()}
+            <div class="box">
+                <h3>While Loop</h3>
+                <p>${countNumbers(5).join(", ")}</p>
+            </div>
+            ${separate()}
+            <div class="box">
+                <h3>Do-While Loop</h3>
+                <p>${countWithDoWhile(3).join(", ")}</p>
+            </div>
+            ${separate()}
+            <div class="box">
+                <h3>Full Name</h3>
+                <p>${printFullName("Lakshay", "Gautam")}</p>
+            </div>
+            ${separate()}
+            <div class="box">
+                <h3>Unordered List</h3>
+                ${createHtmlList(["Apple", "Banana", "Cherry"])}
+            </div>
+            <div class="box">
+                <h3>Ordered List</h3>
+                ${createHtmlList(["One", "Two", "Three"], "ol")}
+            </div>
+        `;
+    </script>
+</body>
+</html>
