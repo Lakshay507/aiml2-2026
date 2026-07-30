@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function sum(){
+            let age=parseInt(prompt("enter yopur age"));
+            if(age>=18){
+                let c=confirm("do you want to vote");
+                if(c==true){
+                    alert("your response is recorded");
+                }else{
+                    alert("thank you ");
+                }
+            }else {
+                alert("not eligible");
+            }
+        }
+    </script>
+</head>
+<body>
+    <input type="button" onclick="sum()" value="result">
+    <input type="button" onclick="sum()" value="result">
+    
+</body>
+</html>
