@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    let price = prompt("enter product price");
+    let quantity = prompt("enter product quantity");
+
+    if (price === null || quantity === null || price === "" || quantity === "") {
+        document.write("Please enter valid values.");
+    } else {
+        price = parseInt(price);
+        quantity = parseInt(quantity);
+
+        function Student(product_id, product_name, product_price, product_quantity) {
+            this.product_id = product_id;
+            this.product_name = product_name;
+            this.product_price = product_price;
+            this.product_quantity = product_quantity;
+
+            this.display = function () {
+                document.write("Product: " + this.product_name + "<br>");
+                document.write("Price: " + this.product_price + "<br>");
+                document.write("Quantity: " + this.product_quantity + "<br>");
+            };
+        }
+
+        let s1 = new Student(101, "apple", price, quantity);
+        s1.display();
+        let s2 = new Student(102, "samsung", price, quantity);
+        s2.display();
+        let s3 = new Student(103, "oneplus", price, quantity);
+        s3.display();
+    }
+</script>
+</body>
+</html>
