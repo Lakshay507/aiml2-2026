@@ -53,8 +53,8 @@ class Patient extends Person {
     }
 }
 
-let doctor1 = new Doctor(101, "Rahul", 40, "Cardiologist", 1000);
-let doctor2 = new Doctor(102, "Priya", 35, "Dermatologist", 800);
+let doctor1 = new Doctor(101, "Rahul", 40, "Physician ", 1000);
+let doctor2 = new Doctor(102, "Priya", 35, "Practitioner", 800);
 
 let patient1 = new Patient(201, "Aman", 25, "Fever", 101);
 let patient2 = new Patient(202, "Neha", 30, "Diabetes", 102);
